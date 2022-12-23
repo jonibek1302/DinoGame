@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 100%;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 50px;
+}
+
+.game {
+  width: 500px;
+  height: 200px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+}
+
+.tras {
+  width: 900px;
+  height: 1px;
+  border-bottom: 7px dashed black;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  z-index: 3;
+  -webkit-animation: trassa 1.8s linear infinite normal forwards;
+          animation: trassa 1.8s linear infinite normal forwards;
+}
+@-webkit-keyframes trassa {
+  to {
+    left: -300px;
+  }
+  from {
+    left: 0;
+  }
+}
+@keyframes trassa {
+  to {
+    left: -300px;
+  }
+  from {
+    left: 0;
+  }
+}
+
+.dinosaur {
+  position: absolute;
+  left: 30px;
+  bottom: -1px;
+  z-index: 4;
+}
+.dino-animation {
+  -webkit-animation: jump 0.7s linear infinite normal forwards;
+          animation: jump 0.7s linear infinite normal forwards;
+}
+
+@-webkit-keyframes jump {
+  0% {
+    bottom: -1px;
+  }
+  30% {
+    bottom: 80px;
+  }
+  70% {
+    bottom: 80px;
+  }
+  100% {
+    bottom: -1px;
+  }
+}
+
+@keyframes jump {
+  0% {
+    bottom: -1px;
+  }
+  30% {
+    bottom: 80px;
+  }
+  70% {
+    bottom: 80px;
+  }
+  100% {
+    bottom: -1px;
+  }
+}
+.cactusdino {
+  position: absolute;
+  bottom: 0;
+  -webkit-animation: block 1.8s linear infinite normal forwards;
+          animation: block 1.8s linear infinite normal forwards;
+}
+.cactusdino .cactus {
+  width: 30px;
+  height: 40px;
+}
+@-webkit-keyframes block {
+  0% {
+    left: 510px;
+  }
+  100% {
+    left: -40px;
+  }
+}
+@keyframes block {
+  0% {
+    left: 510px;
+  }
+  100% {
+    left: -40px;
+  }
+}
+
+.replay {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+}
+
+@media (max-width: 530px) {
+  .game {
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}/*# sourceMappingURL=main.css.map */
